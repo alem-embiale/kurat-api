@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Ethiopia01
+    url: jdbc:mysql://localhost:3306/kurat?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
