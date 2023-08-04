@@ -9,5 +9,4 @@ public class KuratApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(KuratApiApplication.class, args);
     }
-
 }

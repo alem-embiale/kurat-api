@@ -1,7 +1,14 @@
+buildscript {
+    dependencies {
+        classpath 'org.flywaydb:flyway-mysql:9.8.1'
+    }
+}
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.2'
     id 'io.spring.dependency-management' version '1.1.2'
+    id "org.flywaydb.flyway" version "9.8.1"
 }
 
 group = 'com.kurat'
@@ -23,6 +30,6 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
-}
+//tasks.named('test') {
+//    useJUnitPlatform()
+//}

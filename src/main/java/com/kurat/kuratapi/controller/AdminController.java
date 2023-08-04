@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -27,8 +24,8 @@ public class AdminController {
 
     @GetMapping
     public List<Admin> getAllAdmins() {
-        return Collections.singletonList(new Admin("Alem", "Embiale", "email@email.com"));
-        //return adminService.getAllAdmins();
+//        return Collections.singletonList(new Admin("Alem", "Embiale", "email@email.com"));
+        return adminService.getAllAdmins();
     }
 
 }
