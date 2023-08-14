@@ -1,7 +1,21 @@
+buildscript {
+    dependencies {
+        classpath 'org.flywaydb:flyway-mysql:9.21.1'
+    }
+}
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.2'
     id 'io.spring.dependency-management' version '1.1.2'
+    id "io.freefair.lombok" version "8.1.0"
+    id "org.flywaydb.flyway" version "9.21.1"
+}
+
+flyway {
+    url = 'jdbc:mysql://localhost:3306/kurat'
+    user = 'root'
+    password = 'Ethiopia01'
 }
 
 group = 'com.kurat'
@@ -23,6 +37,6 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
-}
+//tasks.named('test') {
+//    useJUnitPlatform()
+//}
