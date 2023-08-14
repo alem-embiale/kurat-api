@@ -1,13 +1,14 @@
 package com.kurat.kuratapi.model;
 
-
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Objects;
 
+@Data
 @Entity
-@Table(name = "admin")
-public class Admin {
+@Table(name = "admins")
+public class Admins {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,11 +21,11 @@ public class Admin {
 
     private String email;
 
-    public Admin() {
+    public Admins() {
 
     }
 
-    public Admin(String firstName, String lastName, String email) {
+    public Admins(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -61,8 +62,8 @@ public class Admin {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Admin)) return false;
-        Admin admin = (Admin) o;
+        if (!(o instanceof Admins)) return false;
+        Admins admin = (Admins) o;
         return id == admin.id && Objects.equals(firstName, admin.firstName) && Objects.equals(lastName, admin.lastName) && Objects.equals(email, admin.email);
     }
 
